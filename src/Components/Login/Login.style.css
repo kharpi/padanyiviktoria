@@ -1,0 +1,17 @@
+.login-wrapper{
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+
+.login-card{
+  border-radius: 25px;
+  padding: 3rem;
+  min-height: 40%;
+  min-width: 60%;
+}
+
+.login-card__form{
+  display: grid;
+  gap: 2rem;
+}
