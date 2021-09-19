@@ -18,6 +18,11 @@ const Navbar = () => {
 				</Link>
 			</li>
 			<li className='gradient-text'>
+				<Link to='/homeworks' onClick={() => set_opened(false)}>
+					Házi feladatok
+				</Link>
+			</li>
+			<li className='gradient-text'>
 				<Link to='/users' onClick={() => set_opened(false)}>
 					Felhasználók
 				</Link>

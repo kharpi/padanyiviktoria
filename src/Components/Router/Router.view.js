@@ -7,6 +7,7 @@ import Layout from '../Layout/Layout.view';
 import DashboardController from '../Dashboard/Dashboard.controller';
 import UsersController from '../Users/Users.controller';
 import UserUploadController from '../UserUpload/UserUpload.controller';
+import HomeworksController from '../HomeWorks/Homeworks.controller';
 
 const Router = () => {
 	const userContext = useContext(UserContext);
@@ -37,6 +38,12 @@ const Router = () => {
 				key={`usersPage`}
 				component={UsersController}
 				path={`/users`}
+				exact
+			/>,
+			<Route
+				key={`homeworksPage`}
+				component={HomeworksController}
+				path={`/homeworks`}
 				exact
 			/>,
 		];
