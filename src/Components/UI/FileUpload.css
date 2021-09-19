@@ -4,7 +4,14 @@
   flex-direction: column;
   justify-content: center;
 }
-.file-upload{
+.file-wrapper section div{
+  min-height: 30vh;
+  border: 2px dashed white;
+  margin-bottom: 1rem;
+  display: grid;
+  place-items: center
+}
+.file-wrapper p{
   margin-bottom: 1rem;
   font-size: .8em;
   outline: none !important;
@@ -14,6 +21,7 @@
   border-radius: 25px;
   text-transform: uppercase;
   font-weight: 600;
+  text-align: center;
   border: none;
   cursor: pointer;
   -webkit-transition: background-color 0.3s linear;
@@ -22,27 +30,4 @@
   -o-transition: background-color 0.3s linear;
   transition: background-color 0.3s linear;
   white-space: break-spaces;
-}
-.file-upload::-webkit-file-upload-button {
-  visibility: hidden;
-}
-.file-upload::before {
-  content: 'Válassz fájlt!';
-  display: inline-block;
-  border: .1rem solid rgba(255,255,255,0.3);
-  border-radius: 25px;
-  padding: .5rem 1rem;
-  background: linear-gradient(to right top, rgba(92,83,255,1) 0%, rgba(40, 33, 103, 0.7) 100%);
-  background-clip: text;
-  color:transparent;
-  outline: none;
-  white-space: nowrap;
-  user-select: none;
-  cursor: pointer;
-  font-weight: 900;
-  font-size: 1em;
-  transition: .3s all linear;
-}
-.file-upload:hover::before {
-  border-color: rgba(255,255,255,1);
 }
