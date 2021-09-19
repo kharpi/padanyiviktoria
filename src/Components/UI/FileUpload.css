@@ -9,7 +9,8 @@
   border: 2px dashed white;
   margin-bottom: 1rem;
   display: grid;
-  place-items: center
+  place-items: center;
+  cursor: pointer;
 }
 .file-wrapper p{
   margin-bottom: 1rem;
@@ -23,7 +24,6 @@
   font-weight: 600;
   text-align: center;
   border: none;
-  cursor: pointer;
   -webkit-transition: background-color 0.3s linear;
   -moz-transition: background-color 0.3s linear;
   -ms-transition: background-color 0.3s linear;
