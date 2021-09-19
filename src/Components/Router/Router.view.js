@@ -6,6 +6,7 @@ import { isExpired } from 'react-jwt';
 import Layout from '../Layout/Layout.view';
 import DashboardController from '../Dashboard/Dashboard.controller';
 import UsersController from '../Users/Users.controller';
+import UserUploadController from '../UserUpload/UserUpload.controller';
 
 const Router = () => {
 	const userContext = useContext(UserContext);
@@ -21,6 +22,12 @@ const Router = () => {
 				key={`mainPage`}
 				component={DashboardController}
 				path={`/`}
+				exact
+			/>,
+			<Route
+				key={`userUploadPage`}
+				component={UserUploadController}
+				path={`/upload`}
 				exact
 			/>,
 		];

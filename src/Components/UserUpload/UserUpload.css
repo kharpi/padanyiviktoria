@@ -1,0 +1,8 @@
+.user_upload-wrapper{
+  min-height: 100%;
+  width: 100%;
+  padding: 2.5rem 1.5rem;
+  border-radius: 25px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+}

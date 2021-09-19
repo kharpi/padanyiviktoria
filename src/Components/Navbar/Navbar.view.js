@@ -30,9 +30,11 @@ const Navbar = () => {
 					Dokumentumok
 				</Link>
 			</li>
-			{/* <li className='gradient-text'>
-				<Link to='/upload'>Házi feltöltése</Link>
-			</li> */}
+			<li className='gradient-text'>
+				<Link to='/upload' onClick={() => set_opened(false)}>
+					Feltöltés
+				</Link>
+			</li>
 		</>
 	);
 	return (
