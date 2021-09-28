@@ -49,6 +49,11 @@ const Navbar = () => {
 			</div>
 			<ul className='desktop'>
 				{li_array}
+				<li className='gradient-text'>
+					<Link to='/presentations' onClick={() => set_opened(false)}>
+						Előadások
+					</Link>
+				</li>
 				<li
 					onClick={() => {
 						userContext.logout();

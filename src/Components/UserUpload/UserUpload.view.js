@@ -1,11 +1,10 @@
 import FileUpload from '../UI/FileUpload';
 import Spinner from '../UI/Spinner';
-import './UserUpload.css';
 
 const UserUploadView = (props) => {
 	if (props.loading) return <Spinner />;
 	return (
-		<section className='user_upload-wrapper glass'>
+		<section className='section-wrapper glass'>
 			{!props.uploaded && (
 				<div style={{ marginBottom: '2rem' }}>
 					<h2>Prezentáció feltöltése:</h2>

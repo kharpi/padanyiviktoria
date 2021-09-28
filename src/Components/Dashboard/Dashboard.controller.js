@@ -15,13 +15,21 @@ const DashboardController = () => {
 			set_loading(
 				getFiles()
 					.then((res) => set_files(ValidateResponse(res).payload))
-					.catch((err) => set_error(err.response.data.error))
+					.catch(
+						(err) =>
+							!ValidateResponse(err.response).status &&
+							set_error(err.response.data.error)
+					)
 					.finally(() => set_loading(null))
 			);
 		else
 			getFiles()
 				.then((res) => set_files(ValidateResponse(res).payload))
-				.catch((err) => set_error(err.response.data.error))
+				.catch(
+					(err) =>
+						!ValidateResponse(err.response).status &&
+						set_error(err.response.data.error)
+				)
 				.finally(() => set_loading(null));
 	};
 
@@ -44,7 +52,11 @@ const DashboardController = () => {
 				.then(() => {
 					loadFiles(false);
 				})
-				.catch((err) => console.log(err))
+				.catch(
+					(err) =>
+						!ValidateResponse(err.response).status &&
+						set_error(err.response.data.error)
+				)
 		);
 	};
 
@@ -52,7 +64,11 @@ const DashboardController = () => {
 		set_loading(
 			getFile(name)
 				.then((res) => fileDownload(res.data, name))
-				.catch((err) => set_error(err.response.data.error))
+				.catch(
+					(err) =>
+						!ValidateResponse(err.response).status &&
+						set_error(err.response.data.error)
+				)
 				.finally(() => set_loading(null))
 		);
 	};
@@ -60,7 +76,11 @@ const DashboardController = () => {
 		set_loading(
 			deleteFile(name)
 				.then(() => loadFiles())
-				.catch((err) => set_error(err.response.data.error))
+				.catch(
+					(err) =>
+						!ValidateResponse(err.response).status &&
+						set_error(err.response.data.error)
+				)
 				.finally(() => set_loading(null))
 		);
 	};

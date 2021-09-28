@@ -21,6 +21,7 @@ const UsersController = () => {
 	const [users, set_users] = useState([]);
 	const [loading, set_loading] = useState(false);
 	const [error, set_error] = useState(null);
+	const [showReg, set_showReg] = useState(false);
 	const [roles, set_roles] = useState([]);
 
 	useEffect(() => {
@@ -92,7 +93,11 @@ const UsersController = () => {
 						)
 					)
 				)
-				.catch((err) => set_error(err.response.data.error))
+				.catch(
+					(err) =>
+						!ValidateResponse(err.response).status &&
+						set_error(err.response.data.error)
+				)
 				.finally(() => set_loading(null))
 		);
 	};
@@ -101,7 +106,11 @@ const UsersController = () => {
 		set_loading(
 			deleteUser(id)
 				.then(() => loadUsers())
-				.catch((err) => set_error(err.response.data.error))
+				.catch(
+					(err) =>
+						!ValidateResponse(err.response).status &&
+						set_error(err.response.data.error)
+				)
 				.finally(() => set_loading(null))
 		);
 	};
@@ -110,7 +119,11 @@ const UsersController = () => {
 		set_loading(
 			getRoles()
 				.then((res) => set_roles(ValidateResponse(res).payload))
-				.catch((err) => set_error(err.response.data.error))
+				.catch(
+					(err) =>
+						!ValidateResponse(err.response).status &&
+						set_error(err.response.data.error)
+				)
 				.finally(() => set_loading(null))
 		);
 	};
@@ -125,6 +138,8 @@ const UsersController = () => {
 			onChange={onChange}
 			form={form}
 			roles={roles}
+			showReg={showReg}
+			set_showReg={set_showReg}
 		/>
 	);
 };

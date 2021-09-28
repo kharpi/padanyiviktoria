@@ -2,21 +2,24 @@ import Button from '../UI/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { TextInput } from '../UI/TextInput';
-import { useState } from 'react';
 import Select from '../UI/Select';
 import Spinner from '../UI/Spinner';
+import './Users.css';
 
 const UsersView = (props) => {
-	const [showReg, set_showReg] = useState(false);
 	if (props.loading) return <Spinner isTiny />;
 	return (
-		<section className='users-wrapper glass'>
+		<section className='section-wrapper users-wrapper glass'>
 			<h2>Felhasználók:</h2>
 			<div>
-				<Button small hasContainer onClick={() => set_showReg(!showReg)}>
-					{showReg ? 'X' : 'Hozzáadás'}
+				<Button
+					small
+					hasContainer
+					onClick={() => props.set_showReg(!props.showReg)}
+				>
+					{props.showReg ? 'X' : 'Hozzáadás'}
 				</Button>
-				{showReg && (
+				{props.showReg && (
 					<form onSubmit={props.onSubmit}>
 						<TextInput {...props.form.login} onChange={props.onChange} />
 						<TextInput {...props.form.password} onChange={props.onChange} />

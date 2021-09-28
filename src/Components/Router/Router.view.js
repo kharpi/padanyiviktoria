@@ -8,6 +8,7 @@ import DashboardController from '../Dashboard/Dashboard.controller';
 import UsersController from '../Users/Users.controller';
 import UserUploadController from '../UserUpload/UserUpload.controller';
 import HomeworksController from '../HomeWorks/Homeworks.controller';
+import PresentationView from '../Presentation/Presentation.view';
 
 const Router = () => {
 	const userContext = useContext(UserContext);
@@ -29,6 +30,12 @@ const Router = () => {
 				key={`userUploadPage`}
 				component={UserUploadController}
 				path={`/upload`}
+				exact
+			/>,
+			<Route
+				key={`PresentationPage`}
+				component={PresentationView}
+				path={`/presentations`}
 				exact
 			/>,
 		];

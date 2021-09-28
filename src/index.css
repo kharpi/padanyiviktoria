@@ -21,6 +21,17 @@ a{
   text-decoration: none !important;
 }
 
+ul{
+  list-style: none;
+}
+
+section li{
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: white;
+  font-weight: 700;
+}
+
 h2{
   text-transform: uppercase;
   font-size: 1.5em;
@@ -45,4 +56,13 @@ h2{
   background: linear-gradient(to right top, rgba(92,83,255,1) 0%, rgba(40, 33, 103, 0.7) 100%);
   color: transparent;
   background-clip: text;
+}
+
+.section-wrapper{
+  min-height: 100%;
+  width: 100%;
+  padding: 2.5rem 1.5rem;
+  border-radius: 25px;
+  overflow: hidden;
+  overflow-wrap: break-word;
 }

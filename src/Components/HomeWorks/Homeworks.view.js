@@ -7,7 +7,7 @@ import './Homeworks.css';
 const HomeworksView = (props) => {
 	if (props.loading) return <Spinner isTiny />;
 	return (
-		<section className='homeworks-wrapper glass'>
+		<section className='section-wrapper homeworks-wrapper glass'>
 			<h2>Házi feladatok:</h2>
 			<ul>
 				{props.files.map((file, idx) => (

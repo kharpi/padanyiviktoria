@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { ValidateResponse } from '../../Utils/ValidateResponse.util';
 import { uploadUserFile } from './UserUpload.api';
 import UserUploadView from './UserUpload.view';
 
@@ -22,7 +23,11 @@ const UserUploadController = () => {
 				.then(() => {
 					set_uploaded(true);
 				})
-				.catch((err) => set_error(err))
+				.catch(
+					(err) =>
+						!ValidateResponse(err.response).status &&
+						set_error(err.response.data.error)
+				)
 				.finally(() => {
 					set_loading(null);
 				})

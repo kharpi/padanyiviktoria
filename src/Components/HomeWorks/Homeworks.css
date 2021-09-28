@@ -1,20 +1,3 @@
-.homeworks-wrapper{
-  min-height: 100%;
-  width: 100%;
-  padding: 2.5rem 1.5rem;
-  border-radius: 25px;
-  overflow: hidden;
-  overflow-wrap: break-word;
-}
-.homeworks-wrapper ul{list-style: none;}
-
-.homeworks-wrapper li{
-  margin-bottom: 1rem;
-  line-height: 1.6;
-  color: white;
-  font-weight: 700;
-}
-
 .homeworks-wrapper li button{
   margin-left: 1rem;
 }

@@ -11,7 +11,7 @@ const DashboardView = (props) => {
 	const userContext = useContext(UserContext);
 	if (props.loading) return <Spinner isTiny />;
 	return (
-		<section className='dashboard glass'>
+		<section className='section-wrapper dashboard glass'>
 			{userContext.getRole() && (
 				<div style={{ marginBottom: '2rem' }}>
 					<h2>Feltöltés:</h2>

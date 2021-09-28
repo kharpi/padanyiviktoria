@@ -18,13 +18,21 @@ const HomeworksController = () => {
 			set_loading(
 				getHomeworks()
 					.then((res) => set_files(ValidateResponse(res).payload))
-					.catch((err) => set_error(err.response.data.error))
+					.catch(
+						(err) =>
+							!ValidateResponse(err.response).status &&
+							set_error(err.response.data.error)
+					)
 					.finally(() => set_loading(null))
 			);
 		else
 			getHomeworks()
 				.then((res) => set_files(ValidateResponse(res).payload))
-				.catch((err) => set_error(err.response.data.error))
+				.catch(
+					(err) =>
+						!ValidateResponse(err.response).status &&
+						set_error(err.response.data.error)
+				)
 				.finally(() => set_loading(null));
 	};
 
@@ -37,7 +45,11 @@ const HomeworksController = () => {
 		set_loading(
 			getSpecifiedHomework(name)
 				.then((res) => fileDownload(res.data, name))
-				.catch((err) => set_error(err.response.data.error))
+				.catch(
+					(err) =>
+						!ValidateResponse(err.response).status &&
+						set_error(err.response.data.error)
+				)
 				.finally(() => set_loading(null))
 		);
 	};
@@ -45,7 +57,11 @@ const HomeworksController = () => {
 		set_loading(
 			deleteHomework(name)
 				.then(() => loadFiles())
-				.catch((err) => set_error(err.response.data.error))
+				.catch(
+					(err) =>
+						!ValidateResponse(err.response).status &&
+						set_error(err.response.data.error)
+				)
 				.finally(() => set_loading(null))
 		);
 	};
