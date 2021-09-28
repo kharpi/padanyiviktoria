@@ -1,0 +1,56 @@
+[
+  {
+    "heading": "Keddi csoport",
+    "themesAndDates": [
+      {
+        "lead":"Szeptember 21.",
+        "pres": ["Biztonsági kérdésekről általában", "Felhasználó hitelesítése"]
+      },
+      {
+        "lead":"Szeptember 28.",
+        "pres": ["Emotet", "Social media biztonsági kérdései"]
+      },
+      {
+        "lead":"Október 5.",
+        "pres": ["Zeus, Trickbot, Gh0st Rat", "Ransomware"]
+      },
+      {
+        "lead":"Október 12.",
+        "pres": ["Kriptovaluták"]
+      },
+      {
+        "lead":"Október 19.",
+        "pres": ["IoT, felhő biztonsági kérdései"]
+      },
+      {
+        "lead":"Október 26.",
+        "pres": ["Engerigaszolgálató biztonsági kérdései", "Stuxnet"]
+      }
+    ]
+  },
+  {
+    "heading": "Szerdai csoport",
+    "themesAndDates": [
+      {
+        "lead":"Szeptember 29.",
+        "pres": ["Biztonsági kérdésekről általában", "Felhasználó hitelesítése"]
+      },
+      {
+        "lead":"Október 6.",
+        "pres": ["Emotet", "Zeus, Trickbot, Gh0st Rat"]
+      },
+      {
+        "lead":"Október 13.",
+        "pres": ["Kriptovaluták", "Ransomware"]
+      },
+      {
+        "lead":"Október 20.",
+        "pres": ["Social media biztonsági kérdései", "Adatvédelmi megfontolások, GDPR"]
+      },
+      {
+        "lead":"Október 27.",
+        "pres": ["IoT, felhő biztonsági kérdései", "Engerigaszolgálató biztonsági kérdései", "Stuxnet"]
+      }
+    ]
+  }
+]

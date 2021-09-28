@@ -1,0 +1,13 @@
+.presentation-wrapper {
+  overflow-y: scroll;
+  max-height: 60vh;
+}
+
+.presentation-wrapper ul li.sublead {
+  font-weight: 900;
+  font-size: 120%;
+}
+
+.presentation-wrapper ul ul li {
+  padding-left: 1rem;
+}
