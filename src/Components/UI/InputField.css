@@ -35,7 +35,7 @@
   width: 100%;
   border-width: 0.2rem;
   border-style: solid;
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: var(--white-03);
   color: white;
   box-sizing: border-box;
   font-size: 1em;
@@ -44,12 +44,12 @@
   position: relative;
   max-height: 4rem;
   border-radius: 25px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--white-01);
 }
 .common-input:focus {
   border-width: 0.2rem;
   border-style: solid;
-  border-color: rgb(255,255,255, 0.7);
+  border-color: var(--white-07);
 }
 .valid-input {
   border: 0.2rem solid #003145 !important;
@@ -81,7 +81,7 @@
   margin-left: 15px;
 }
 .input-warning {
-  color: rgba(255,255,255, 0.9);
+  color: var(--white-09);
   font-size: 1em;
   padding: 0.4rem 0 0.2rem 1rem;
   margin: 0;

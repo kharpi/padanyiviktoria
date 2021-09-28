@@ -4,9 +4,24 @@
   box-sizing: border-box;
 }
 
+:root{
+  --white-01: rgba(255,255,255,0.1);
+  --white-02: rgba(255,255,255,0.2);
+  --white-03: rgba(255,255,255,0.3);
+  --white-04: rgba(255,255,255,0.4);
+  --white-05: rgba(255,255,255,0.5);
+  --white-06: rgba(255,255,255,0.6);
+  --white-07: rgba(255,255,255,0.7);
+  --white-08: rgba(255,255,255,0.8);
+  --white-09: rgba(255,255,255,0.9);
+  --purple-dark: rgb(92,83,255);
+  --purple-light: rgb(106,94,207);
+  --blue-light: rgb(0,212,255);
+}
+
 body{
   font-size: 62.5%;
-  background: linear-gradient(to right top, rgba(92,83,255,1) 0%, rgba(106,94,207,1) 48%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(to right top, var(--purple-dark) 0%, var(--purple-light) 48%, var(--blue-light) 100%);
   min-height: 100vh;
   font-family: 'Roboto'
 }
@@ -37,23 +52,23 @@ h2{
   font-size: 1.5em;
   width: 100%;
   color: white;
-  border-bottom: .2rem solid rgba(255,255,255,0.3);
+  border-bottom: .2rem solid var(--white-03);
   margin-bottom: 2rem;
   padding-bottom: 1rem;
 }
 
 .glass{
-  background: linear-gradient(to right bottom, rgba(255,255,255,0.6), rgba(255,255,255,0.2));
+  background: linear-gradient(to right bottom, var(--white-06), var(--white-02));
   backdrop-filter: blur(2rem);
 }
 
 .glass.darken{
-  background: linear-gradient(to right bottom, rgba(255,255,255,0.9), rgba(255,255,255,0.6));
+  background: linear-gradient(to right bottom, var(--white-09), var(--white-06));
   backdrop-filter: blur(2rem);
 }
 
 .gradient-text{
-  background: linear-gradient(to right top, rgba(92,83,255,1) 0%, rgba(40, 33, 103, 0.7) 100%);
+  background: linear-gradient(to right top, var(--purple-dark) 0%, rgba(40, 33, 103, 0.7) 100%);
   color: transparent;
   background-clip: text;
 }

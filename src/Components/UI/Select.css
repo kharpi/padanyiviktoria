@@ -10,9 +10,9 @@
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  border: 2px solid rgba(255,255,255,0.3);
+  border: 2px solid var(--white-03);
   border-radius: 25px;
-  background-color: rgba(255,255,255,0.1);
+  background-color: var(--white-01);
   height: 50px;
   color: white;
   cursor: pointer;
@@ -45,12 +45,12 @@
 }
 .select-input .__menu {
   border-radius: 25px;
-  background-color: rgba(255,255,255,0.4);
+  background-color: var(--white-04);
   backdrop-filter: blur(2rem);
   border: none;
 }
 .select-input .__menu .__option {
-  background-color: rgba(255,255,255,0);
+  background-color: transparent;
   backdrop-filter: blur(4rem);
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
@@ -62,23 +62,23 @@
   border-radius: 25px;
 }
 .select-input .__menu .__option--is-focused {
-  color: rgba(92,83,255,1);
+  color: var(--purple-dark);
   border-radius: 25px;
 }
 .select-input .__menu .__option--is-focused:hover {
-  color: rgba(92,83,255,1);
-  background-color: rgba(255,255,255,0.3);
+  color: var(--purple-dark);
+  background-color: var(--white-03);
   border-radius: 25px;
 }
 .select-input .__menu .__option--is-selected {
-  background-color: rgba(92,83,255,1);
+  background-color: var(--purple-dark);
   color: white;
   border-radius: 25px;
 }
 .select-input:hover {
-  background-color: rgba(255,255,255,0.1);
+  background-color: var(--white-01);
   border-radius: 25px;
-  color: rgba(92,83,255,1);
+  color: var(--purple-dark);
 }
 .disabled-select-wrapper {
   cursor: not-allowed;
