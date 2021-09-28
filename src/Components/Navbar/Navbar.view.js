@@ -27,6 +27,11 @@ const Navbar = () => {
 					Felhasználók
 				</Link>
 			</li>
+			<li className='gradient-text'>
+				<Link to='/presentations' onClick={() => set_opened(false)}>
+					Előadások
+				</Link>
+			</li>
 		</>
 	) : (
 		<>
@@ -40,6 +45,11 @@ const Navbar = () => {
 					Feltöltés
 				</Link>
 			</li>
+			<li className='gradient-text'>
+				<Link to='/presentations' onClick={() => set_opened(false)}>
+					Előadások
+				</Link>
+			</li>
 		</>
 	);
 	return (
@@ -49,11 +59,6 @@ const Navbar = () => {
 			</div>
 			<ul className='desktop'>
 				{li_array}
-				<li className='gradient-text'>
-					<Link to='/presentations' onClick={() => set_opened(false)}>
-						Előadások
-					</Link>
-				</li>
 				<li
 					onClick={() => {
 						userContext.logout();
