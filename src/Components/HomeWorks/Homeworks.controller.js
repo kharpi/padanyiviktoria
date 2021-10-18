@@ -22,11 +22,13 @@ const HomeworksController = () => {
 					.then((res) =>
 						set_files(
 							ValidateResponse(res)
-								.payload.map((data) => {
+								.payload.sort(
+									(a, b) => new Date(b.birthtime) - new Date(a.birthtime)
+								)
+								.map((data) => {
 									data.birthtime = createHRFFromDate(data.birthtime);
 									return data;
 								})
-								.sort((a, b) => new Date(b.birthtime) - new Date(a.birthtime))
 						)
 					)
 					.catch(
@@ -41,11 +43,13 @@ const HomeworksController = () => {
 				.then((res) =>
 					set_files(
 						ValidateResponse(res)
-							.payload.map((data) => {
+							.payload.sort(
+								(a, b) => new Date(b.birthtime) - new Date(a.birthtime)
+							)
+							.map((data) => {
 								data.birthtime = createHRFFromDate(data.birthtime);
 								return data;
 							})
-							.sort((a, b) => new Date(b.birthtime) - new Date(a.birthtime))
 					)
 				)
 				.catch(
