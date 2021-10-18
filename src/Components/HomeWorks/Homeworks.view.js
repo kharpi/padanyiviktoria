@@ -12,11 +12,11 @@ const HomeworksView = (props) => {
 			<ul>
 				{props.files.map((file, idx) => (
 					<li key={`file-${idx}`}>
-						{file}
-						<Button onClick={() => props.download(file)} small>
+						{`${file.birthtime} - ${file.file}`}
+						<Button onClick={() => props.download(file.file)} small>
 							<FontAwesomeIcon icon={faDownload} />
 						</Button>
-						<Button onClick={() => props.deleteFile(file)} small>
+						<Button onClick={() => props.deleteFile(file.file)} small>
 							<FontAwesomeIcon icon={faTrash} />
 						</Button>
 					</li>
